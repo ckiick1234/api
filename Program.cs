@@ -14,6 +14,12 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
+// This is for test only.
+app.UseCors(x => x
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
